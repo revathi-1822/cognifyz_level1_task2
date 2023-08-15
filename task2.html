@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greetings</title>
+    <style>
+        body {
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            transition: background-image 1s ease-in-out;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50px;
+            width: 8%;
+            height: 8%;
+            color: white;
+            background-color: rebeccapurple;
+            box-shadow: 10px 10px 18px black;
+            cursor: pointer;
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="myAlert()">Click Here</button>
+    <script>
+        function myAlert() {
+            var currentDate = new Date();
+            var currentHour = currentDate.getHours();
+            emojigm = "☀️";
+            emojian = "🌞";
+            emojige = "🌆";
+            emojign = "🌙";
+            if (currentHour >= 1 && currentHour <= 12) {
+                alert("Now the time is " + currentHour + " Good Morning" + emojigm);
+                document.body.style.backgroundImage = "url('https://c0.wallpaperflare.com/preview/666/545/86/west-beach-baltic-sea-ahrenshoop-sunset.jpg')";
+            }
+            else if (currentHour >= 12 && currentHour <= 16) {
+                alert("Now the time is " + currentHour + " Good Afternoon" + emojian);
+                document.body.style.backgroundImage = "url('https://c0.wallpaperflare.com/preview/666/545/86/west-beach-baltic-sea-ahrenshoop-sunset.jpg')";
+            }
+            else if (currentHour > 16 && currentHour <= 20) {
+                alert("Now the time is " + currentHour + " Good Evening" + emojige);
+                document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1675918829464-f91ac7792572?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80')";
+            }
+            else {
+                alert("Now the time is " + currentHour + " Good Night" + emojign);
+                document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9tNPf1Muq5t5G6dO3Nfv0ZRRHWOFRNTfhw&usqp=CAU')";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

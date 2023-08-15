@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <style>
+        body {
+            background-color: rgb(23, 23, 23);
+        }
+
+        .container {
+            position: absolute;
+            top: 33%;
+            left: 35%;
+            border-radius: 15px;
+            border: 1px solid rgb(66, 66, 79);
+            box-shadow: 0px 0px 15px rgb(230, 223, 223);
+            padding: 60px;
+            margin: 20px;
+            background: transparent;
+            backdrop-filter: blur(20px);
+            background-color: white;
+        }
+
+        input {
+            border-bottom: 1px solid gray;
+            border: none;
+            border-bottom: 1px solid rgb(227, 99, 99);
+            background: transparent;
+            outline: none;
+            font-style: italic;
+            font-size: large;
+        }
+
+        button {
+            border-radius: 80px;
+            width: 40%;
+            height: 20%;
+            font-size: 20;
+            cursor: pointer;
+            color: red;
+            background-color: rgb(243, 218, 218);
+        }
+
+        h1 {
+            position: absolute;
+            top: 25%;
+            left: 38%;
+            color: rgba(227, 87, 87, 0.825);
+        }
+
+        #Result {
+            color: rgb(180, 39, 39);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="container">
+        <div class="inputs">
+            <input type="number" placeholder="enter input1" id="input1" /><br></br>
+            <input type="number" placeholder="enter input2" id="input2" /><br></br>
+        </div>
+        <button type="button" onclick="addTwo()">Add</button>
+        <p id="Result"></p>
+    </div>
+    <script>
+        function addTwo() {
+            var input1 = parseFloat(document.getElementById("input1").value);
+            var input2 = parseFloat(document.getElementById("input2").value);
+            var sum = 0;
+            if (isNaN(input1) || isNaN(input2)) {
+                document.getElementById("Result").innerHTML = "Result is invalid..please enter valid numbers";
+            }
+            else {
+                sum = input1 + input2;
+                document.getElementById("Result").innerHTML = "Result is:" + sum;
+            }
+        }
+    </script>
+</body>
+
+</html>
